@@ -1,0 +1,43 @@
+"C:\Program Files\Eclipse Adoptium\jdk-21.0.5.11-hotspot\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.3\lib\idea_rt.jar=52069" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\salma\IdeaProjects\E-commerce1\out\production\E-commerce1 Main
+Test Case 1: Normal checkout with a variety of products
+
+** Checkout Receipt **
+2 x Cheese          $200.00
+3 x TV              $150.00
+1 x Card            $30.00
+1 x Biscuits        $150.00
+---------------------
+Subtotal:     $530.00
+Shipping:     $30.00
+Total Paid:   $560.00
+Remaining Balance: $440.00
+
+** Shipment Notice **
+1 x Biscuits        700g
+2 x Cheese          400g
+Total Package Weight: 1.1kg
+
+--------------------
+Test Case 2: Attempting checkout with an empty cart
+Error: Cannot checkout an empty cart
+--------------------
+Test Case 3: Checkout with insufficient customer balance
+Error: Customer balance insufficient
+--------------------
+Test Case 4: Checkout with an expired product
+
+** Checkout Receipt **
+1 x Expired Cheese  $100.00
+---------------------
+Subtotal:     $100.00
+Shipping:     $30.00
+Total Paid:   $130.00
+Remaining Balance: $310.00
+
+** Shipment Notice **
+1 x Expired Cheese  200g
+Total Package Weight: 0.2kg
+
+--------------------
+
+Process finished with exit code 0
